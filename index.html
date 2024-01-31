@@ -27,29 +27,15 @@
                 <div class="thumbs">
                     <div @click="prevImg()" class="prev"></div>
                     <div @click="nextImg()" class="next"></div>
-                    <div v-for="(index, slide) in slides" 
+                    <div v-for="(slide, index) in slides" 
                     :class="(index == slideActive) ? 'active' : ''"
                     @click="goToSlide(index)" 
                     class="thumb active">
-                        <img :src="slides.image" alt="Svezia" />
+                        <img :src="slide.image" alt="Svezia"/>
                     </div>
-                    <!-- <div class="thumb">
-                        <img src="img/02.webp" alt="Ratchet & Clank" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/03.webp" alt="Fortnite" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/04.webp" alt="Stray" />
-                    </div>
-                    <div class="thumb">
-                        <img src="img/05.webp" alt="Avengers" />
-                    </div> -->
                 </div>
-
             </div>
         </div>
-
     </div>
 
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
